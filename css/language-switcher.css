@@ -5,6 +5,24 @@
     margin-left: 20px;
 }
 
+/* 导航栏中的语言切换器 */
+.nav-language-switcher {
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
+}
+
+/* 导航条运行时更灵活的布局 */
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    flex-grow: 1;
+}
+
 .language-switcher-label {
     margin-right: 10px;
     font-size: 14px;
