@@ -1,0 +1,57 @@
+/* 语言切换器样式 */
+.language-switcher {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.language-switcher-label {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.language-options {
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+.lang-btn {
+    padding: 6px 12px;
+    background-color: #f9fafb;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.lang-btn:hover {
+    background-color: #f3f4f6;
+}
+
+.lang-btn.active {
+    background-color: #4338ca;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .language-switcher {
+        margin-top: 15px;
+        margin-left: 0;
+    }
+    
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .top-bar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

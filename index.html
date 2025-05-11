@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>工作室 - 创新数字解决方案</title>
+    <title data-i18n="page_title">工作室 - 创新数字解决方案</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/language-switcher.css">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -361,15 +362,25 @@
     <div class="page-wrapper">
         <header>
             <div class="container">
-                <div class="logo">
-                    <a href="index.html"><img src="img/logo.svg" alt="创新工作室" height="40"></a>
+                <div class="top-bar">
+                    <div class="logo">
+                        <a href="index.html"><img src="img/logo.svg" alt="创新工作室" height="40"></a>
+                    </div>
+                    <div class="language-switcher">
+                        <span class="language-switcher-label" data-i18n="language">语言</span>
+                        <div class="language-options">
+                            <button class="lang-btn" data-lang="zh">中</button>
+                            <button class="lang-btn" data-lang="en">EN</button>
+                            <button class="lang-btn" data-lang="ja">日</button>
+                        </div>
+                    </div>
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="index.html" class="active"><i class="fas fa-home"></i> 首页</a></li>
-                        <li><a href="products.html"><i class="fas fa-mobile-alt"></i> 产品中心</a></li>
-                        <li><a href="support.html"><i class="fas fa-life-ring"></i> 技术支持</a></li>
-                        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> 隐私政策</a></li>
+                        <li><a href="index.html" class="active"><i class="fas fa-home"></i> <span data-i18n="nav_home">首页</span></a></li>
+                        <li><a href="products.html"><i class="fas fa-mobile-alt"></i> <span data-i18n="nav_products">产品中心</span></a></li>
+                        <li><a href="support.html"><i class="fas fa-life-ring"></i> <span data-i18n="nav_support">技术支持</span></a></li>
+                        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> <span data-i18n="nav_privacy">隐私政策</span></a></li>
                     </ul>
                 </nav>
             </div>
@@ -378,14 +389,11 @@
         <section class="home-hero">
             <div class="container">
                 <div class="hero-content-home">
-                    <p class="hero-subtitle">创新 · 品质 · 专业</p>
-                    <h1 class="hero-title">打造卓越的移动应用体验</h1>
-                    <p class="hero-description">
-                        我们是一家专注于移动应用开发的创新工作室，致力于为用户提供直观、高效且美观的数字产品解决方案。
-                    </p>
+                    <h1 class="hero-title" data-i18n="hero_title">为您的数字世界提供创新解决方案</h1>
+                    <p class="hero-subtitle" data-i18n="hero_subtitle">我们创造出色的应用和软件，让您的生活更便捷</p>
                     <div class="hero-actions">
                         <a href="products.html" class="btn-hero btn-hero-primary">
-                            <i class="fas fa-th-large"></i> 浏览产品
+                            <i class="fas fa-th-large"></i> <span data-i18n="hero_cta">探索我们的产品</span>
                         </a>
                         <a href="#about" class="btn-hero btn-hero-secondary">
                             <i class="fas fa-info-circle"></i> 了解我们
@@ -442,25 +450,27 @@
             <div class="container">
                 <div class="about-container">
                     <div class="about-content">
-                        <h2>关于我们的工作室</h2>
-                        <p>
-                            创想工作室成立于2020年，是一家由充满激情的开发者、设计师和产品专家组成的团队。我们专注于移动应用开发，致力于为用户创造有价值的数字体验。
-                        </p>
+                        <h2 data-i18n="about_title">关于我们的工作室</h2>
+                        <p data-i18n="about_desc">创新工作室成立于2020年，致力于开发高质量的移动应用和软件解决方案。我们的团队由经验丰富的开发者、设计师和产品专家组成，共同打造卓越的用户体验。</p>
                         <p>
                             我们相信技术应该服务于人，而不是相反。每一款应用的开发，我们都秉持着以用户为中心的理念，确保产品不仅功能强大，而且简单易用。
                         </p>
                         <div class="about-stats">
                             <div class="stat-item">
-                                <div class="stat-number">10+</div>
-                                <div class="stat-label">应用产品</div>
+                                <div class="stat-value">5</div>
+                                <div class="stat-label" data-i18n="stats_years">创立年限</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-number">5年+</div>
-                                <div class="stat-label">行业经验</div>
+                                <div class="stat-value">24+</div>
+                                <div class="stat-label" data-i18n="stats_products">发布产品</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-number">100万+</div>
-                                <div class="stat-label">用户</div>
+                                <div class="stat-value">500k+</div>
+                                <div class="stat-label" data-i18n="stats_users">活跃用户</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-value">12</div>
+                                <div class="stat-label" data-i18n="stats_updates">每年更新</div>
                             </div>
                         </div>
                     </div>
@@ -519,12 +529,12 @@
         <section class="cta-section">
             <div class="container">
                 <div class="cta-container">
-                    <h2 class="cta-title">需要技术支持？</h2>
-                    <p class="cta-description">
-                        我们的支持团队随时为您提供帮助，解答问题，确保您获得最佳的使用体验。
+                    <h2 class="cta-title" data-i18n="cta_title">需要技术支持？</h2>
+                    <p class="cta-description" data-i18n="cta_desc">
+                        我们随时为您提供帮助。无论您有任何问题或需求，都可以联系我们的支持团队。
                     </p>
-                    <a href="support.html" class="btn-hero btn-hero-primary">
-                        <i class="fas fa-headset"></i> 获取支持
+                    <a href="support.html" class="btn btn-primary">
+                        <i class="fas fa-headset"></i> <span data-i18n="cta_button">联系技术支持</span>
                     </a>
                 </div>
             </div>
@@ -594,5 +604,6 @@
             }
         });
     </script>
+    <script src="js/i18n.js"></script>
 </body>
 </html>
