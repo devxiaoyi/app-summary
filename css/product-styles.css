@@ -20,6 +20,8 @@
     border: 1px solid rgba(0, 0, 0, 0.05);
     height: 100%;
     display: flex;
+    margin: 3rem;
+    padding: 3rem;
     flex-direction: column;
 }
 
@@ -30,7 +32,7 @@
 
 .product-image {
     position: relative;
-    height: 220px;
+    height: 180px;
     overflow: hidden;
 }
 

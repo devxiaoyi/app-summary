@@ -18,7 +18,7 @@ const translations = {
         'stats_users': '活跃用户',
         'stats_updates': '每年更新',
         'cta_title': '需要技术支持？',
-        'cta_desc': '我们随时为您提供帮助。无论您有任何问题或需求，都可以联系我们的支持团队。',
+        'cta_desc': '无论您有任何问题或需求，都可以联系我们的支持团队。',
         'cta_button': '联系技术支持',
         
         // 产品中心
