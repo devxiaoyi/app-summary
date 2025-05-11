@@ -8,11 +8,11 @@ const translations = {
         'nav_privacy': '隐私政策',
         
         // 首页
-        'hero_title': '为您的数字世界提供创新解决方案',
-        'hero_subtitle': '我们创造出色的应用和软件，让您的生活更便捷',
-        'hero_cta': '探索我们的产品',
+        'hero_title': '用创意和 AI 制作产品',
+        'hero_subtitle': '想象无限可能',
+        'hero_cta': '探索产品',
         'about_title': '关于我们的工作室',
-        'about_desc': '创新工作室成立于2020年，致力于开发高质量的移动应用和软件解决方案。我们的团队由经验丰富的开发者、设计师和产品专家组成，共同打造卓越的用户体验。',
+        'about_desc': 'UnoVision 工作室成立于2022年，致力于开发高质量的移动应用和软件解决方案。我们的团队由经验丰富的开发者、设计师和产品专家组成，共同打造卓越的用户体验。',
         'stats_years': '创立年限',
         'stats_products': '发布产品',
         'stats_users': '活跃用户',

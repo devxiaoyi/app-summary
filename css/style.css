@@ -176,6 +176,7 @@ header nav ul li a i {
 }
 
 .hero-description {
+    color: rgba(255, 255, 255, 0.9);
     font-size: 1.25rem;
     margin-bottom: 2rem;
     opacity: 0.9;
@@ -349,7 +350,7 @@ p {
 }
 
 .faq-answer {
-    padding: 0 1.5rem 1.5rem;
+    padding: 0 1.5rem 2.5rem;
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s ease-out;
@@ -477,6 +478,7 @@ footer {
     }
     
     .hero-description {
+        color: rgba(255, 255, 255, 0.9);
         font-size: 1.1rem;
     }
     
