@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4338ca;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#grad1)"/>
+  
+  <!-- 装饰元素 -->
+  <circle cx="200" cy="100" r="50" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="1000" cy="200" r="100" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="300" cy="500" r="80" fill="rgba(255,255,255,0.1)"/>
+  <circle cx="900" cy="450" r="120" fill="rgba(255,255,255,0.1)"/>
+  
+  <!-- 抽象线条 -->
+  <path d="M0 300 Q 600 100 1200 300" stroke="rgba(255,255,255,0.2)" stroke-width="5" fill="none"/>
+  <path d="M0 350 Q 600 550 1200 350" stroke="rgba(255,255,255,0.2)" stroke-width="5" fill="none"/>
+</svg>
