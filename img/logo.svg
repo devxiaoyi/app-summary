@@ -7,5 +7,5 @@
   <path d="M15 10 H35 V15 H27.5 V40 H22.5 V15 H15 V10 Z" fill="white"/>
   
   <!-- 公司名称 -->
-  <text x="60" y="30" font-family="Arial, sans-serif" font-weight="bold" font-size="20" fill="#4338ca">Tech Studio</text>
+  <text x="60" y="30" font-family="Arial, sans-serif" font-weight="bold" font-size="16" fill="#4338ca">UnoVision Studio</text>
 </svg>
