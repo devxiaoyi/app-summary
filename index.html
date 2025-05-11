@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工作室 - 创新数字解决方案</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* 首页特定样式 */
+        .home-hero {
+            background: linear-gradient(135deg, #4338ca 0%, #6366f1 100%);
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .home-hero::before,
+        .home-hero::after {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 0;
+        }
+        
+        .home-hero::before {
+            top: -150px;
+            right: -100px;
+            width: 600px;
+            height: 600px;
+        }
+        
+        .home-hero::after {
+            bottom: -150px;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .hero-content-home {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero-description {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .btn-hero {
+            padding: 0.9rem 2rem;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-hero-primary {
+            background-color: white;
+            color: var(--primary-color);
+        }
+        
+        .btn-hero-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            color: var(--primary-dark);
+        }
+        
+        .btn-hero-secondary {
+            background-color: rgba(255, 255, 255, 0.15);
+            color: white;
+            backdrop-filter: blur(5px);
+        }
+        
+        .btn-hero-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+            color: white;
+        }
+        
+        /* 特色部分 */
+        .features-section {
+            padding: 5rem 0;
+            background-color: var(--light-color);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            padding: 2.5rem 2rem;
+            text-align: center;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--box-shadow-hover);
+        }
+        
+        .feature-icon {
+            height: 4rem;
+            width: 4rem;
+            background-color: rgba(99, 102, 241, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 1.75rem;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover .feature-icon {
+            background-color: var(--primary-color);
+            color: white;
+            transform: rotateY(180deg);
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .feature-description {
+            color: var(--gray-color);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* 工作室介绍部分 */
+        .about-section {
+            padding: 5rem 0;
+        }
+        
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-color);
+        }
+        
+        .about-content p {
+            color: var(--gray-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .about-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--gray-color);
+            font-size: 0.9rem;
+        }
+        
+        .about-image {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            height: 100%;
+            min-height: 400px;
+        }
+        
+        .about-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* 产品预览部分 */
+        .preview-section {
+            padding: 5rem 0;
+            background-color: var(--light-color);
+        }
+        
+        .preview-container {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+        
+        .preview-container h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .preview-container p {
+            color: var(--gray-color);
+            font-size: 1.1rem;
+        }
+        
+        .product-preview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        /* CTA部分 */
+        .cta-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #4338ca 0%, #6366f1 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .cta-section::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -150px;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .cta-container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 991px) {
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                order: -1;
+                max-height: 400px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-stats {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fas fa-code"></i></span>
+                    <h1>创想工作室</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active"><i class="fas fa-home"></i> 首页</a></li>
+                        <li><a href="products.html"><i class="fas fa-mobile-alt"></i> 产品中心</a></li>
+                        <li><a href="support.html"><i class="fas fa-life-ring"></i> 技术支持</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> 隐私政策</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section class="home-hero">
+            <div class="container">
+                <div class="hero-content-home">
+                    <p class="hero-subtitle">创新 · 品质 · 专业</p>
+                    <h1 class="hero-title">打造卓越的移动应用体验</h1>
+                    <p class="hero-description">
+                        我们是一家专注于移动应用开发的创新工作室，致力于为用户提供直观、高效且美观的数字产品解决方案。
+                    </p>
+                    <div class="hero-actions">
+                        <a href="products.html" class="btn-hero btn-hero-primary">
+                            <i class="fas fa-th-large"></i> 浏览产品
+                        </a>
+                        <a href="#about" class="btn-hero btn-hero-secondary">
+                            <i class="fas fa-info-circle"></i> 了解我们
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <div class="section-header" style="text-align: center;">
+                    <h2>我们的优势</h2>
+                    <p style="color: var(--gray-color); max-width: 700px; margin: 1rem auto 0;">
+                        凭借专业技术和创新思维，我们为客户提供高品质的应用产品和服务
+                    </p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h3 class="feature-title">精心设计</h3>
+                        <p class="feature-description">
+                            注重用户体验和界面美观，每一个像素都经过精心打磨，确保应用直观易用。
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="feature-title">高质量开发</h3>
+                        <p class="feature-description">
+                            采用先进的技术架构和严格的代码标准，打造稳定、高效、安全的应用产品。
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3 class="feature-title">持续更新</h3>
+                        <p class="feature-description">
+                            不断迭代优化产品，及时响应用户反馈，持续提供新功能和改进体验。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="about-container">
+                    <div class="about-content">
+                        <h2>关于我们的工作室</h2>
+                        <p>
+                            创想工作室成立于2020年，是一家由充满激情的开发者、设计师和产品专家组成的团队。我们专注于移动应用开发，致力于为用户创造有价值的数字体验。
+                        </p>
+                        <p>
+                            我们相信技术应该服务于人，而不是相反。每一款应用的开发，我们都秉持着以用户为中心的理念，确保产品不仅功能强大，而且简单易用。
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">10+</div>
+                                <div class="stat-label">应用产品</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">5年+</div>
+                                <div class="stat-label">行业经验</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">100万+</div>
+                                <div class="stat-label">用户</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="img/studio-team.jpg" alt="工作室团队" onerror="this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'500\' height=\'400\' viewBox=\'0 0 500 400\'%3E%3Crect fill=\'%23f0f0f0\' width=\'500\' height=\'400\'/%3E%3Ctext fill=\'%23999\' font-family=\'Arial,sans-serif\' font-size=\'36\' text-anchor=\'middle\' x=\'250\' y=\'200\'%3E工作室团队%3C/text%3E%3C/svg%3E'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="preview-section">
+            <div class="container">
+                <div class="preview-container">
+                    <h2>精选产品</h2>
+                    <p>探索我们精心打造的应用产品，体验创新与品质的结合</p>
+                </div>
+                
+                <div class="product-preview-grid">
+                    <!-- 精选产品 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/product-1.png" alt="产品1" onerror="this.src='img/product-placeholder.svg'">
+                            <div class="product-badge">热门</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>产品名称 1</h3>
+                            <p class="product-category"><i class="fas fa-tag"></i> 工具应用</p>
+                            <p class="product-description">功能强大的工具应用，帮助用户高效完成日常任务。</p>
+                            <a href="product-detail.html?id=1" class="btn-product">了解详情</a>
+                        </div>
+                    </div>
+                    
+                    <!-- 精选产品 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/product-2.png" alt="产品2" onerror="this.src='img/product-placeholder.svg'">
+                            <div class="product-badge new">新品</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>产品名称 2</h3>
+                            <p class="product-category"><i class="fas fa-tag"></i> 生活服务</p>
+                            <p class="product-description">专为提升生活品质设计的应用，让日常事务处理更轻松。</p>
+                            <a href="product-detail.html?id=2" class="btn-product">了解详情</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="products.html" class="btn-primary" style="padding: 0.75rem 2rem;">
+                        查看全部产品 <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-container">
+                    <h2 class="cta-title">需要技术支持？</h2>
+                    <p class="cta-description">
+                        我们的支持团队随时为您提供帮助，解答问题，确保您获得最佳的使用体验。
+                    </p>
+                    <a href="support.html" class="btn-hero btn-hero-primary">
+                        <i class="fas fa-headset"></i> 获取支持
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-code"></i></span>
+                        <h2>创想工作室</h2>
+                    </div>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="index.html" class="active"><i class="fas fa-home"></i> 首页</a></li>
+                            <li><a href="products.html"><i class="fas fa-mobile-alt"></i> 产品中心</a></li>
+                            <li><a href="support.html"><i class="fas fa-life-ring"></i> 技术支持</a></li>
+                            <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> 隐私政策</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 创想工作室. 保留所有权利。</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 简单的滚动动画
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // 为统计数字添加动画
+            const observerOptions = {
+                threshold: 0.5
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const statNumbers = entry.target.querySelectorAll('.stat-number');
+                        statNumbers.forEach(number => {
+                            number.style.animation = 'counter 2s ease forwards';
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            const stats = document.querySelector('.about-stats');
+            if (stats) {
+                observer.observe(stats);
+            }
+        });
+    </script>
+</body>
+</html>

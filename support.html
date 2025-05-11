@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App 支持中心</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fas fa-headset"></i></span>
+                    <h1>App 支持中心</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                        <li><a href="products.html"><i class="fas fa-mobile-alt"></i> 产品中心</a></li>
+                        <li><a href="support.html" class="active"><i class="fas fa-life-ring"></i> 技术支持</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> 隐私政策</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>欢迎访问技术支持</h2>
+                    <p class="hero-description">我们致力于为您提供卓越的产品体验和服务支持</p>
+                    <a href="#contact" class="btn-primary">联系我们</a>
+                </div>
+            </div>
+        </div>
+
+        <main class="container">
+            <section id="contact" class="support-section">
+                <div class="section-header">
+                    <span class="section-icon"><i class="fas fa-headset"></i></span>
+                    <h2>技术支持</h2>
+                </div>
+                <p class="section-intro">感谢您使用我们的应用程序。如果您遇到任何问题或需要帮助，请通过以下方式联系我们：</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-card">
+                        <div class="card-icon"><i class="fas fa-envelope"></i></div>
+                        <h3>电子邮件支持</h3>
+                        <p>发送邮件至: <a href="mailto:support@example.com">support@example.com</a></p>
+                        <p>我们将在24小时内回复您的咨询。</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="card-icon"><i class="fas fa-question-circle"></i></div>
+                        <h3>常见问题</h3>
+                        <p>查看我们的<a href="#faq">常见问题解答</a>，获取快速帮助。</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="card-icon"><i class="fas fa-comment-dots"></i></div>
+                        <h3>在线客服</h3>
+                        <p>工作时间：周一至周五 9:00-18:00</p>
+                        <p>随时为您提供帮助。</p>
+                    </div>
+                </div>
+            </section>
+        
+        <section id="faq" class="faq-section">
+            <div class="section-header">
+                <span class="section-icon"><i class="fas fa-question-circle"></i></span>
+                <h2>常见问题解答</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3><i class="fas fa-key"></i> 如何重置我的密码？</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>在登录界面点击“忘记密码”，然后按照提示操作。您将收到一封包含重置链接的电子邮件。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3><i class="fas fa-exclamation-triangle"></i> 应用程序闪退怎么办？</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>请尝试以下步骤：</p>
+                        <ol>
+                            <li>关闭并重新启动应用程序</li>
+                            <li>确保您的应用程序已更新至最新版本</li>
+                            <li>重启您的设备</li>
+                            <li>如果问题持续存在，请联系我们的技术支持团队</li>
+                        </ol>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3><i class="fas fa-sync-alt"></i> 如何更新应用程序？</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>打开 App Store，点击您的个人资料图标，向下滚动查看可用更新，找到我们的应用并点击“更新”。</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3><i class="fas fa-mobile-alt"></i> 应用占用存储空间过大怀么办？</h3>
+                        <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>您可以尝试清除应用缓存：</p>
+                        <ol>
+                            <li>前往设置 > 一般 > iPhone 存储</li>
+                            <li>找到我们的应用并点击进入</li>
+                            <li>选择“清除应用数据”选项</li>
+                            <li>注意这可能会删除应用内的一些设置和数据</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon"><i class="fas fa-headset"></i></span>
+                    <h2>App 支持中心</h2>
+                </div>
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                        <li><a href="products.html"><i class="fas fa-mobile-alt"></i> 产品中心</a></li>
+                        <li><a href="support.html" class="active"><i class="fas fa-life-ring"></i> 技术支持</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> 隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 App 名称. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // 简单的交互脚本以实现FAQ的展开/收起功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('.toggle-icon i');
+                    
+                    // 切换显示/隐藏回答
+                    if (answer.style.maxHeight) {
+                        answer.style.maxHeight = null;
+                        icon.classList.remove('fa-chevron-up');
+                        icon.classList.add('fa-chevron-down');
+                    } else {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.classList.remove('fa-chevron-down');
+                        icon.classList.add('fa-chevron-up');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

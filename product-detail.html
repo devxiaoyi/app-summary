@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品详情 - App 支持中心</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fas fa-headset"></i></span>
+                    <h1>App 支持中心</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                        <li><a href="products.html" class="active"><i class="fas fa-mobile-alt"></i> 产品中心</a></li>
+                        <li><a href="support.html"><i class="fas fa-life-ring"></i> 技术支持</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> 隐私政策</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container product-detail-container">
+            <div class="product-breadcrumbs">
+                <a href="products.html"><i class="fas fa-chevron-left"></i> 返回产品中心</a>
+            </div>
+
+            <section class="product-detail-section">
+                <div class="product-detail-header">
+                    <h2 id="product-title">产品名称</h2>
+                    <div class="product-category-badge" id="product-category">工具应用</div>
+                </div>
+
+                <div class="product-detail-content">
+                    <div class="product-detail-main">
+                        <div class="product-detail-gallery">
+                            <div class="product-main-image">
+                                <img id="product-main-image" src="img/product-detail-1.png" alt="产品详情" onerror="this.src='img/product-placeholder.svg'">
+                            </div>
+                            <div class="product-thumbnails">
+                                <div class="product-thumbnail active" data-image="img/product-detail-1.png">
+                                    <img src="img/product-detail-1.png" alt="缩略图1" onerror="this.src='img/product-placeholder.svg'">
+                                </div>
+                                <div class="product-thumbnail" data-image="img/product-detail-2.png">
+                                    <img src="img/product-detail-2.png" alt="缩略图2" onerror="this.src='img/product-placeholder.svg'">
+                                </div>
+                                <div class="product-thumbnail" data-image="img/product-detail-3.png">
+                                    <img src="img/product-detail-3.png" alt="缩略图3" onerror="this.src='img/product-placeholder.svg'">
+                                </div>
+                                <!-- 可以根据需要添加更多缩略图 -->
+                            </div>
+                        </div>
+
+                        <div class="product-detail-info">
+                            <div class="product-detail-description">
+                                <h3>产品介绍</h3>
+                                <p id="product-description">
+                                    这是产品的详细描述内容。这里可以放置产品的详细信息，包括产品的设计理念、使用场景、核心优势等内容。
+                                    在这里可以详细解释产品是如何解决用户问题的，以及为什么用户应该选择这款产品。
+                                    这部分内容应当充分展示产品的价值和独特卖点。
+                                </p>
+                            </div>
+
+                            <div class="product-detail-features">
+                                <h3>主要功能</h3>
+                                <ul id="product-features">
+                                    <li><i class="fas fa-check-circle"></i> <strong>功能一：</strong>描述功能一的详细内容和优势</li>
+                                    <li><i class="fas fa-check-circle"></i> <strong>功能二：</strong>描述功能二的详细内容和优势</li>
+                                    <li><i class="fas fa-check-circle"></i> <strong>功能三：</strong>描述功能三的详细内容和优势</li>
+                                    <li><i class="fas fa-check-circle"></i> <strong>功能四：</strong>描述功能四的详细内容和优势</li>
+                                    <!-- 根据需要添加更多功能点 -->
+                                </ul>
+                            </div>
+
+                            <div class="product-cta">
+                                <a href="#" class="btn-download" id="app-store-link">
+                                    <i class="fab fa-app-store-ios"></i> App Store 下载
+                                </a>
+                                <a href="index.html" class="btn-support">
+                                    <i class="fas fa-headset"></i> 获取支持
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-specs">
+                        <h3>技术规格</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item">
+                                <div class="spec-icon"><i class="fas fa-mobile-alt"></i></div>
+                                <div class="spec-content">
+                                    <h4>平台要求</h4>
+                                    <p id="product-platform">iOS 14.0 或更高版本</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon"><i class="fas fa-language"></i></div>
+                                <div class="spec-content">
+                                    <h4>支持语言</h4>
+                                    <p id="product-languages">简体中文, 英语</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon"><i class="fas fa-file"></i></div>
+                                <div class="spec-content">
+                                    <h4>文件大小</h4>
+                                    <p id="product-size">50 MB</p>
+                                </div>
+                            </div>
+                            <div class="spec-item">
+                                <div class="spec-icon"><i class="fas fa-code-branch"></i></div>
+                                <div class="spec-content">
+                                    <h4>当前版本</h4>
+                                    <p id="product-version">1.2.3</p>
+                                </div>
+                            </div>
+                            <!-- 根据需要添加更多规格信息 -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="related-products">
+                    <h3>相关产品</h3>
+                    <div class="related-products-slider">
+                        <div class="related-product-card">
+                            <img src="img/product-2.png" alt="相关产品1" onerror="this.src='img/product-placeholder.svg'">
+                            <h4>产品名称2</h4>
+                            <a href="product-detail.html?id=2" class="btn-view">查看详情</a>
+                        </div>
+                        <!-- 根据需要添加更多相关产品 -->
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-headset"></i></span>
+                        <h2>App 支持中心</h2>
+                    </div>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                            <li><a href="products.html"><i class="fas fa-mobile-alt"></i> 产品中心</a></li>
+                            <li><a href="support.html"><i class="fas fa-life-ring"></i> 技术支持</a></li>
+                            <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> 隐私政策</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 App 名称. 保留所有权利。</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 处理产品图片缩略图点击事件
+            const thumbnails = document.querySelectorAll('.product-thumbnail');
+            const mainImage = document.getElementById('product-main-image');
+            
+            thumbnails.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    // 移除所有缩略图的active类
+                    thumbnails.forEach(t => t.classList.remove('active'));
+                    
+                    // 添加active类到当前点击的缩略图
+                    this.classList.add('active');
+                    
+                    // 更新主图
+                    const imageUrl = this.getAttribute('data-image');
+                    mainImage.src = imageUrl;
+                });
+            });
+            
+            // 解析URL参数获取产品ID
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+            
+            // 根据产品ID加载不同的产品数据
+            // 在实际应用中，这里可以通过API获取产品数据或使用预定义的数据
+            loadProductData(productId);
+        });
+        
+        // 加载产品数据的函数 - 在实际应用中可以从服务器或JSON文件获取
+        function loadProductData(productId) {
+            // 示例产品数据 - 可以根据需要扩展
+            const productData = {
+                '1': {
+                    title: '产品名称1',
+                    category: '工具应用',
+                    description: '这是产品1的详细描述。这款应用程序提供了强大的功能，帮助用户高效完成日常任务。它具有简洁的界面设计和直观的操作逻辑，适合各个年龄段的用户使用。无论是工作还是生活，这款应用都能成为您的得力助手。',
+                    features: [
+                        '<strong>智能管理：</strong>自动组织和分类您的内容',
+                        '<strong>云端同步：</strong>在多设备间无缝切换使用',
+                        '<strong>隐私保护：</strong>采用高级加密技术保护您的数据',
+                        '<strong>智能提醒：</strong>重要事项不会被遗忘'
+                    ],
+                    platform: 'iOS 14.0 或更高版本',
+                    languages: '简体中文, 英语, 日语, 韩语',
+                    size: '45 MB',
+                    version: '1.2.0'
+                },
+                '2': {
+                    title: '产品名称2',
+                    category: '生活服务',
+                    description: '这是产品2的详细描述。这款应用专为提升生活品质而设计，简洁的界面和强大的功能让日常事务处理更加轻松。通过智能算法，它能够学习用户习惯，提供个性化的服务体验。',
+                    features: [
+                        '<strong>便捷操作：</strong>简单几步即可完成复杂任务',
+                        '<strong>个性化推荐：</strong>基于用户习惯提供定制服务',
+                        '<strong>离线模式：</strong>无网络环境下也能正常使用',
+                        '<strong>节能设计：</strong>优化电池使用，延长设备续航时间'
+                    ],
+                    platform: 'iOS 13.0 或更高版本',
+                    languages: '简体中文, 英语',
+                    size: '38 MB',
+                    version: '2.0.5'
+                }
+                // 可以添加更多产品数据...
+            };
+            
+            // 获取当前产品数据
+            const currentProduct = productData[productId] || {
+                title: '产品详情',
+                category: '未分类',
+                description: '产品信息暂未提供',
+                features: ['暂无功能描述'],
+                platform: '信息未提供',
+                languages: '信息未提供',
+                size: '信息未提供',
+                version: '信息未提供'
+            };
+            
+            // 更新页面内容
+            document.title = `${currentProduct.title} - App 支持中心`;
+            document.getElementById('product-title').textContent = currentProduct.title;
+            document.getElementById('product-category').textContent = currentProduct.category;
+            document.getElementById('product-description').textContent = currentProduct.description;
+            
+            // 更新功能列表
+            const featuresList = document.getElementById('product-features');
+            featuresList.innerHTML = '';
+            currentProduct.features.forEach(feature => {
+                const li = document.createElement('li');
+                li.innerHTML = `<i class="fas fa-check-circle"></i> ${feature}`;
+                featuresList.appendChild(li);
+            });
+            
+            // 更新技术规格
+            document.getElementById('product-platform').textContent = currentProduct.platform;
+            document.getElementById('product-languages').textContent = currentProduct.languages;
+            document.getElementById('product-size').textContent = currentProduct.size;
+            document.getElementById('product-version').textContent = currentProduct.version;
+            
+            // 更新App Store链接
+            document.getElementById('app-store-link').href = `https://apps.apple.com/app/id${1000000000 + parseInt(productId)}`;
+        }
+    </script>
+</body>
+</html>

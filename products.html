@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>产品中心 - App 支持中心</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fas fa-headset"></i></span>
+                    <h1>App 支持中心</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                        <li><a href="products.html" class="active"><i class="fas fa-mobile-alt"></i> 产品中心</a></li>
+                        <li><a href="support.html"><i class="fas fa-life-ring"></i> 技术支持</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> 隐私政策</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <div class="hero products-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>产品中心</h2>
+                    <p class="hero-description">探索我们精心打造的应用程序产品系列</p>
+                </div>
+            </div>
+        </div>
+
+        <main class="container">
+            <section class="products-section">
+                <div class="section-header">
+                    <span class="section-icon"><i class="fas fa-mobile-alt"></i></span>
+                    <h2>我们的产品</h2>
+                </div>
+                <p class="section-intro">我们致力于开发高品质、实用且用户友好的移动应用产品。探索下面的产品列表，了解更多详情。</p>
+                
+                <div class="products-grid">
+                    <!-- 产品卡片示例 - 产品 1 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/product-1.png" alt="产品1" onerror="this.src='img/product-placeholder.svg'">
+                            <div class="product-badge">热门</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>产品名称 1</h3>
+                            <p class="product-category"><i class="fas fa-tag"></i> 类别：工具应用</p>
+                            <p class="product-description">这是一款功能强大的应用程序，帮助用户高效完成日常任务。适合所有年龄段的用户使用。</p>
+                            <div class="product-features">
+                                <span><i class="fas fa-check"></i> 功能特点 1</span>
+                                <span><i class="fas fa-check"></i> 功能特点 2</span>
+                                <span><i class="fas fa-check"></i> 功能特点 3</span>
+                            </div>
+                            <a href="product-detail.html?id=1" class="btn-product">了解详情</a>
+                        </div>
+                    </div>
+
+                    <!-- 产品卡片示例 - 产品 2 -->
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/product-2.png" alt="产品2" onerror="this.src='img/product-placeholder.svg'">
+                            <div class="product-badge new">新品</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>产品名称 2</h3>
+                            <p class="product-category"><i class="fas fa-tag"></i> 类别：生活服务</p>
+                            <p class="product-description">专为提升生活品质设计的应用程序，简洁的界面和强大的功能让日常事务处理更加轻松。</p>
+                            <div class="product-features">
+                                <span><i class="fas fa-check"></i> 简洁界面</span>
+                                <span><i class="fas fa-check"></i> 云端同步</span>
+                                <span><i class="fas fa-check"></i> 智能提醒</span>
+                            </div>
+                            <a href="product-detail.html?id=2" class="btn-product">了解详情</a>
+                        </div>
+                    </div>
+
+                    <!-- 添加新产品的位置 -->
+                    <!-- 
+                    复制以下模板添加新产品:
+                    
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="img/product-x.png" alt="产品名称" onerror="this.src='img/product-placeholder.svg'">
+                            <div class="product-badge">标签文字</div>
+                        </div>
+                        <div class="product-info">
+                            <h3>产品名称</h3>
+                            <p class="product-category"><i class="fas fa-tag"></i> 类别：产品类别</p>
+                            <p class="product-description">产品描述...</p>
+                            <div class="product-features">
+                                <span><i class="fas fa-check"></i> 功能特点 1</span>
+                                <span><i class="fas fa-check"></i> 功能特点 2</span>
+                                <span><i class="fas fa-check"></i> 功能特点 3</span>
+                            </div>
+                            <a href="product-detail.html?id=x" class="btn-product">了解详情</a>
+                        </div>
+                    </div>
+                    -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-headset"></i></span>
+                        <h2>App 支持中心</h2>
+                    </div>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                            <li><a href="products.html" class="active"><i class="fas fa-mobile-alt"></i> 产品中心</a></li>
+                            <li><a href="support.html"><i class="fas fa-life-ring"></i> 技术支持</a></li>
+                            <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> 隐私政策</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 App 名称. 保留所有权利。</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

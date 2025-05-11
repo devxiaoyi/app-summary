@@ -1,0 +1,426 @@
+/* 产品中心页面样式 */
+.products-hero {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+}
+
+/* 产品列表样式 */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.product-card {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.product-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 2rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.product-badge.new {
+    background-color: var(--secondary-color);
+}
+
+.product-info {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info h3 {
+    margin-bottom: 0.75rem;
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+.product-category {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray-color);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.product-description {
+    color: var(--gray-color);
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.product-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-features span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--dark-color);
+}
+
+.product-features i {
+    color: var(--primary-color);
+}
+
+.btn-product {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    font-weight: 500;
+    transition: var(--transition);
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.btn-product:hover {
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+/* 产品详情页样式 */
+.product-detail-container {
+    padding-top: 2rem;
+}
+
+.product-breadcrumbs {
+    margin-bottom: 2rem;
+}
+
+.product-breadcrumbs a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--gray-color);
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.product-breadcrumbs a:hover {
+    color: var(--primary-color);
+}
+
+.product-detail-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.product-detail-header h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.product-category-badge {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-weight: 500;
+}
+
+.product-detail-content {
+    margin-bottom: 3rem;
+}
+
+.product-detail-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.product-detail-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.product-main-image {
+    background-color: #f8f8f8;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.product-main-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.product-thumbnails {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+}
+
+.product-thumbnail {
+    width: 80px;
+    height: 80px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: var(--transition);
+    flex-shrink: 0;
+    border: 2px solid transparent;
+}
+
+.product-thumbnail:hover {
+    opacity: 0.9;
+}
+
+.product-thumbnail.active {
+    opacity: 1;
+    border-color: var(--primary-color);
+}
+
+.product-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-detail-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+}
+
+.product-detail-description {
+    margin-bottom: 2rem;
+}
+
+.product-detail-features ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.product-detail-features li {
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: baseline;
+}
+
+.product-detail-features i {
+    color: var(--primary-color);
+    margin-right: 0.75rem;
+}
+
+.product-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.btn-download, .btn-support {
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: var(--transition);
+}
+
+.btn-download {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-download:hover {
+    background-color: var(--primary-dark);
+    color: white;
+}
+
+.btn-support {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: var(--primary-color);
+}
+
+.btn-support:hover {
+    background-color: rgba(99, 102, 241, 0.2);
+    color: var(--primary-color);
+}
+
+.product-specs {
+    background-color: var(--card-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.spec-item {
+    display: flex;
+    gap: 1rem;
+}
+
+.spec-icon {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: rgba(99, 102, 241, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.spec-content h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--dark-color);
+    font-size: 1rem;
+}
+
+.spec-content p {
+    margin: 0;
+    color: var(--gray-color);
+}
+
+/* 相关产品样式 */
+.related-products {
+    margin-top: 3rem;
+}
+
+.related-products h3 {
+    margin-bottom: 1.5rem;
+}
+
+.related-products-slider {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+}
+
+.related-product-card {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.related-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.related-product-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.related-product-card h4 {
+    padding: 1rem 1rem 0.5rem;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.btn-view {
+    display: block;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    background-color: rgba(99, 102, 241, 0.1);
+    color: var(--primary-color);
+    margin: 0 1rem 1rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.btn-view:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* 响应式样式 */
+@media (max-width: 991px) {
+    .product-detail-main {
+        grid-template-columns: 1fr;
+    }
+    
+    .specs-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    
+    .specs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

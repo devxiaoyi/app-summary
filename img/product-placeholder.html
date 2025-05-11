@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create PNG Placeholder</title>
+  <script>
+    window.onload = function() {
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d');
+      
+      // 设置背景色
+      ctx.fillStyle = '#f0f0f0';
+      ctx.fillRect(0, 0, 400, 300);
+      
+      // 添加文字
+      ctx.fillStyle = '#666';
+      ctx.font = '24px Arial';
+      ctx.textAlign = 'center';
+      ctx.fillText('产品图片', 200, 150);
+      
+      // 添加简单图形
+      ctx.fillStyle = '#999';
+      ctx.fillRect(180, 100, 40, 40);
+      
+      ctx.beginPath();
+      ctx.arc(200, 180, 20, 0, Math.PI * 2);
+      ctx.fill();
+      
+      // 创建一个链接元素用于下载
+      const link = document.getElementById('download');
+      link.href = canvas.toDataURL('image/png');
+    };
+  </script>
+</head>
+<body>
+  <h1>产品占位图</h1>
+  <canvas id="canvas" width="400" height="300"></canvas>
+  <p>
+    <a id="download" download="product-placeholder.png" href="#">下载占位图</a>
+    (右键点击 -> 另存为，保存到img文件夹)
+  </p>
+</body>
+</html>

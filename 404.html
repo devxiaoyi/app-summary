@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>页面未找到 - App 支持中心</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .error-container {
+            padding: 5rem 0;
+            text-align: center;
+        }
+        
+        .error-icon {
+            font-size: 6rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            animation: pulse 1.5s infinite alternate;
+        }
+        
+        .error-code {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+        
+        .error-message {
+            font-size: 1.5rem;
+            color: var(--gray-color);
+            margin-bottom: 2rem;
+        }
+        
+        .error-description {
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            color: var(--gray-color);
+        }
+        
+        .error-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-error {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .btn-primary-error {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary-error:hover {
+            background-color: var(--primary-dark);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .btn-secondary-error {
+            background-color: rgba(99, 102, 241, 0.1);
+            color: var(--primary-color);
+        }
+        
+        .btn-secondary-error:hover {
+            background-color: rgba(99, 102, 241, 0.2);
+            transform: translateY(-3px);
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+        }
+        
+        .suggestion-list {
+            max-width: 600px;
+            margin: 3rem auto;
+            text-align: left;
+            background-color: var(--card-color);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        
+        .suggestion-list h3 {
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color: var(--dark-color);
+        }
+        
+        .suggestion-list ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .suggestion-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+        
+        .suggestion-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .suggestion-list li a {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .suggestion-list li a:hover {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <span class="logo-icon"><i class="fas fa-headset"></i></span>
+                    <h1>App 支持中心</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                        <li><a href="products.html"><i class="fas fa-mobile-alt"></i> 产品中心</a></li>
+                        <li><a href="support.html"><i class="fas fa-life-ring"></i> 技术支持</a></li>
+                        <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> 隐私政策</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <div class="error-container">
+                <div class="error-icon">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <h1 class="error-code">404</h1>
+                <h2 class="error-message">页面未找到</h2>
+                <p class="error-description">
+                    您尝试访问的页面不存在或已被移动。请检查URL地址是否正确，或使用下方链接访问我们的其他页面。
+                </p>
+                
+                <div class="error-actions">
+                    <a href="index.html" class="btn-error btn-primary-error">
+                        <i class="fas fa-home"></i> 返回首页
+                    </a>
+                    <a href="products.html" class="btn-error btn-secondary-error">
+                        <i class="fas fa-mobile-alt"></i> 浏览产品
+                    </a>
+                </div>
+                
+                <div class="suggestion-list">
+                    <h3>您可能想要访问</h3>
+                    <ul>
+                        <li>
+                            <a href="index.html"><i class="fas fa-life-ring"></i> 技术支持中心</a>
+                        </li>
+                        <li>
+                            <a href="products.html"><i class="fas fa-mobile-alt"></i> 产品中心</a>
+                        </li>
+                        <li>
+                            <a href="privacy.html"><i class="fas fa-shield-alt"></i> 隐私政策</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-headset"></i></span>
+                        <h2>App 支持中心</h2>
+                    </div>
+                    <div class="footer-links">
+                        <ul>
+                            <li><a href="index.html"><i class="fas fa-home"></i> 首页</a></li>
+                            <li><a href="products.html"><i class="fas fa-mobile-alt"></i> 产品中心</a></li>
+                            <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> 隐私政策</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 App 名称. 保留所有权利。</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+    <script>
+        // 简单的404页面交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 添加页面加载动画
+            document.body.classList.add('loaded');
+            
+            // 记录404错误
+            console.log('404错误：', window.location.pathname);
+        });
+    </script>
+</body>
+</html>
